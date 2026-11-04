@@ -34,7 +34,7 @@ O Clicky aberto usa uma etiqueta no fim da resposta, que o app tira do texto ant
 
 ## Memória
 
-O Clicky aberto manda só as últimas dez trocas junto com cada pedido e não grava arquivo. Mantenha na fala o cartão de três linhas de `estado.md` quando a sessão for longa: no começo, pergunte o objetivo em uma frase; ao terminar um pedaço, repita em uma frase onde a pessoa está. Se o app tiver memória ou agentes próprios, use-os para guardar o cartão e agendar a revisão.
+O Clicky aberto manda só as últimas dez trocas junto com cada pedido e não grava arquivo. Mantenha na fala o cartão de quatro linhas de `estado.md` quando a sessão for longa: no começo, pergunte o objetivo em uma frase; ao terminar um pedaço, repita em uma frase onde a pessoa está. Se o app tiver memória ou agentes próprios, use-os para guardar o cartão e agendar a revisão. Dentro da sessão, repare no que funciona (apontar antes ou deixar procurar, explicar antes ou deixar tentar) e use mais disso nas próximas trocas.
 
 ## Exemplos de uso
 

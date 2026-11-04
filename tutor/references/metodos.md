@@ -37,6 +37,24 @@ Koedinger, Corbett e Perfetti (2012). *The Knowledge-Learning-Instruction Framew
 | Aprendizagem cognitiva | Mostrar o raciocínio em voz alta, acompanhar, dar andaime, retirar | Collins, Brown e Holum (1991), American Educator | sem DOI | |
 | Ciência da aprendizagem para quem ensina | Resumo prático de seis estratégias: espaçar, intercalar, recuperar, elaborar, exemplo concreto, palavra e imagem | Weinstein, Madan e Sumeracki (2018), doi:10.1186/s41235-017-0087-y | 239 | |
 
+## Modelo do aprendiz e julgamento do próprio aprendizado
+
+Base da seção 7 do SKILL.md e de `padrao.md`.
+
+| Ideia | O que o tutor faz | Fonte | Citações | Cuidado |
+|---|---|---|---|---|
+| Rastrear o domínio item a item | Estima se a pessoa domina cada item pelo histórico de acertos | Corbett e Anderson (1994), knowledge tracing, doi:10.1007/bf01099821 | 2341 | Aqui vira contagem simples no diário, sem modelo estatístico |
+| Modelo aberto do aprendiz | Mostra para a pessoa o que acha dela e deixa corrigir | Bull e Kay (2016), SMILI, doi:10.1007/s40593-015-0090-8 | 165 | |
+| O que adaptar | Variáveis cognitivas, emocionais, motivacionais e socioculturais | Plass e Pawar (2020), doi:10.1080/15391523.2020.1719943 | 208 | |
+| Exemplos do mundo da pessoa | Troca o contexto dos exemplos pelos interesses dela | Walkington (2013), doi:10.1037/a0031882 | 323 | Ganho maior para quem estava com dificuldade |
+| Interesse se desenvolve | Começa pelo que desperta curiosidade na hora e vai aprofundando | Hidi e Renninger (2006), doi:10.1207/s15326985ep4102_4 | 4710 | |
+| A sensação engana | Usa o resultado atrasado, não a opinião, como evidência | Bjork, Dunlosky e Kornell (2013), doi:10.1146/annurev-psych-113011-143823 | 1470 | |
+| Preferir o que não funciona | Não troca intercalar por blocos porque a pessoa acha melhor | Kornell e Bjork (2008), doi:10.1111/j.1467-9280.2008.02127.x | 603 | Os participantes acharam os blocos melhores mesmo depois de o teste mostrar o contrário |
+| Sentir que aprendeu menos | Não troca prática ativa por exposição porque pareceu mais clara | Deslauriers et al. (2019), doi:10.1073/pnas.1821936116 | 1376 | Na aula ativa aprenderam mais e sentiram que aprenderam menos |
+| Julgamento de aprendizagem | Pede confiança e compara com o acerto | Koriat (1997), doi:10.1037/0096-3445.126.4.349 | 1363 | Prática melhora a resolução, não necessariamente a calibração |
+| Feedback formativo | Feedback específico, na hora certa, sem nota sobre a pessoa | Shute (2008), doi:10.3102/0034654307313795 | 4638 | |
+| Estilo de aprendizagem é mito | Não rotula a pessoa como visual, auditiva ou cinestésica | Kirschner (2017), doi:10.1016/j.compedu.2016.12.006; Rohrer e Pashler (2012), doi:10.1111/j.1365-2923.2012.04273.x | 465 (Kirschner) | |
+
 ## Tutor de IA
 
 - **Sem guarda, a IA vira muleta.** Bastani et al. (2025), PNAS, doi:10.1073/pnas.2422633122 (313 citações). Quase mil alunos de ensino médio. Com GPT-4 durante a prática, as notas subiram 48% (interface comum) e 127% (tutor com guarda). Sem acesso na prova, quem usou a interface comum foi 17% pior que quem nunca usou. O tutor com guarda evitou quase toda a perda.

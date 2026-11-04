@@ -13,6 +13,7 @@ tutor/
     metodos.md             métodos, fontes e o que evitar
     dominios.md            roteiros por tipo de assunto
     estado.md              perfil, plano, diário e revisões em ~/.tutor
+    padrao.md              como o tutor descobre o jeito de cada pessoa aprender
     voz-e-tela.md          como ensinar falando e apontando a tela
 clicky/prompt-tutor.md     versão para colar no prompt do Clicky
 install.sh                 instala no Claude Code, no Hermes ou no OpenClaw
@@ -51,6 +52,8 @@ A skill escolhe entre quatro modos:
 - **Fazer junto.** Um passo por vez, com o porquê e o sinal de que deu certo.
 - **Aprender.** Trilha com diagnóstico, mapa do assunto, prática e revisões.
 - **Revisar.** Perguntas sobre o que venceu.
+
+Com o tempo, o tutor descobre o que funciona para cada pessoa: se ela entende melhor começando por exemplo ou por definição, quantos conceitos novos cabem numa sessão, quanta ajuda ela precisa para destravar, o que esquece rápido e que exemplos a engajam. Ele julga pelo que a pessoa consegue fazer sozinha depois, e não pelo que pareceu claro. O padrão vira hipótese com 3 observações e fica confirmado com 5, contando com revisões dias depois. Quando um padrão muda, o tutor conta para a pessoa e ela pode corrigir. A skill é a mesma para todo mundo; o que é de cada pessoa fica no perfil dela. A escolha está explicada em [`docs/pesquisa.md`](docs/pesquisa.md).
 
 O progresso fica em `~/.tutor` (mude com `TUTOR_HOME`) em arquivos de texto que a pessoa pode abrir e corrigir. Em plataforma com agendamento, como o Hermes e o OpenClaw, o tutor oferece lembrar a revisão no dia certo, e só agenda se a pessoa aceitar.
 
