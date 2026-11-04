@@ -47,3 +47,28 @@ Ficaram de fora "estilos de aprendizagem" (sem evidência, Pashler et al. 2008) 
 ## Clicky
 
 O Clicky (heyclicky.com) é da turma de primavera de 2026 da Y Combinator, de Farza Majeed. A versão aberta (github.com/farzaa/clicky, licença MIT) usa Claude para responder, AssemblyAI para transcrever e ElevenLabs para falar. O modelo aponta a tela com a etiqueta `[POINT:x,y:rótulo]` e responde curto, sem formatação, porque tudo é lido em voz alta. Ele manda as últimas dez trocas a cada pedido. Daí o modo de voz e tela e o prompt em `clicky/prompt-tutor.md`.
+
+## Segunda rodada: como a pessoa aprende
+
+Pergunta: o tutor deve guardar na memória como cada pessoa aprende, ou a própria skill deve ir mudando conforme o feedback de cada usuário?
+
+### Como fazem os outros
+
+- **As três skills de tutoria guardam um arquivo e não mexem na skill.** A `skill-tutor` pergunta o estilo na entrada ("teoria primeiro, mão na massa ou aprender pelo erro?") e guarda observações em `learner_profile.md`. A `teach` guarda o que a pessoa domina, o que está frágil, os equívocos e a calibração da autoavaliação em `learner.md`, e diz por que o estado fica fora da pasta da skill: para não se perder numa atualização e para servir em qualquer agente. A `tutor` só tem `journal.md`.
+- **O Hermes separa memória de procedimento e memória de fatos.** Skills são a memória de procedimento, e o agente pode criar e corrigir skills sozinho. O que é da pessoa vai em `USER.md` e `MEMORY.md`, que entram no prompt no começo de cada sessão. Na milena-vps o `USER.md` tem teto de 1.375 caracteres e o `MEMORY.md`, de 2.200 (`~/.hermes/config.yaml`).
+- **O OpenClaw usa um registro e uma promoção.** A skill `self-improving-agent` anota correções e erros em `.learnings/` e promove o que vale sempre para os arquivos do workspace (`SOUL.md`, `AGENTS.md`, `TOOLS.md`). Também não reescreve a skill que estava em uso.
+
+### Decisão
+
+A skill fica igual para todo mundo, e o padrão de cada pessoa vai para o perfil dela em `~/.tutor/perfil.md`. A adaptação acontece em tempo de uso: o tutor lê o perfil e ajusta porta de entrada, tamanho do passo e quantidade de ajuda. Reescrever a skill por usuário foi descartado por quatro motivos:
+
+1. A skill está instalada por link num repositório. No Hermes, uma correção automática da skill cairia no checkout do Git e misturaria o jeito de uma pessoa com o método de todos.
+2. O mesmo agente atende mais de uma pessoa (a Milena fala com quatro). Uma skill por pessoa não escala.
+3. A memória da plataforma é pequena demais para o modelo do aprendiz. Ela guarda só uma linha apontando para o perfil.
+4. O que a pessoa sente que funciona costuma estar errado (Kornell e Bjork, 2008; Bjork, Dunlosky e Kornell, 2013; Deslauriers et al., 2019). Uma skill que se reescreve pelo feedback dela tenderia a trocar recuperação e espaçamento por reler. Por isso o padrão sai do desempenho, principalmente o atrasado, e a opinião entra como dado separado.
+
+O tutor também não pergunta o estilo na entrada, como faz a `skill-tutor`. Estilo de aprendizagem não tem evidência (Pashler et al., 2008; Kirschner, 2017), e a resposta da pessoa sobre como aprende é o dado menos confiável que existe.
+
+### Referências da rodada
+
+Conferidas no bx-scholar em 04/11/2026: Corbett e Anderson (1994), Bull e Kay (2016), Plass e Pawar (2020), Walkington (2013), Hidi e Renninger (2006), Bjork, Dunlosky e Kornell (2013), Kornell e Bjork (2008), Deslauriers et al. (2019), Koriat (1997), Shute (2008), Kirschner (2017) e Rohrer e Pashler (2012). DOI e citações em `tutor/references/metodos.md`.

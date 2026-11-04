@@ -10,7 +10,7 @@ Computação quântica, relatividade, inflação, aprendizado de máquina, siste
 - Use uma analogia e diga onde ela quebra. A analogia que não é desmontada vira equívoco.
 - Suba a matemática em degraus e só até onde o objetivo pede. Em computação quântica, por exemplo: bit, depois qubit como seta num círculo, superposição, medição, interferência, emaranhamento, e só então a notação de vetor.
 - Peça previsão antes de mostrar o resultado ("o que você acha que sai se medir agora?"). Errar a previsão e ver o resultado fixa mais que só ver.
-- Teste os equívocos clássicos de propósito. Em quântica: "o qubit é 0 e 1 ao mesmo tempo" e "o computador quântico testa todas as respostas em paralelo". Os dois são simplificações que levam a conclusões erradas.
+- Teste os equívocos clássicos de propósito. Em quântica: "o qubit é 0 e 1 ao mesmo tempo", "o computador quântico testa todas as respostas em paralelo" e "10 qubits processam 1.024 combinações de uma vez". São simplificações que levam a conclusões erradas: a medição devolve um resultado só, e a vantagem vem de fazer a interferência reforçar a resposta certa. Não use essas frases nem como ponte.
 
 Abertura de exemplo:
 > Antes de falar de qubit: uma moeda girando no ar está em cara ou coroa? Responde o que te parecer, depois eu te mostro onde essa imagem ajuda e onde ela engana.
