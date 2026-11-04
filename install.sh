@@ -29,7 +29,9 @@ if [ "$mode" = "link" ] && [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ];
   exit 0
 fi
 if [ -e "$dest" ] || [ -L "$dest" ]; then
-  backup="$dest.antes-$(date +%Y%m%d%H%M%S)"
+  # Fora da pasta de skills: um backup ali seria carregado como uma segunda skill tutor.
+  backup="$HOME/.tutor-skill-backup/$(basename "$target")-$(date +%Y%m%d%H%M%S)"
+  mkdir -p "$(dirname "$backup")"
   mv "$dest" "$backup"
   echo "Havia outra skill tutor; movida para $backup"
 fi

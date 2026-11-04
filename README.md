@@ -28,7 +28,7 @@ cd ~/tutor-skill
 ./install.sh openclaw    # OpenClaw: ~/.openclaw/skills/tutor
 ```
 
-O script cria um link para a pasta `tutor/`, então um `git pull` atualiza a skill. Use `--copy` para copiar. Se já houver uma skill `tutor` no destino, ela é movida para um backup antes.
+O script cria um link para a pasta `tutor/`, então um `git pull` atualiza a skill. Use `--copy` para copiar. Se já houver uma skill `tutor` no destino, ela é movida antes para `~/.tutor-skill-backup/`.
 
 No Hermes, com o repositório público, também funciona `hermes skills install leomcamilo/tutor-skill/tutor`, que permite atualizar com `hermes skills update`.
 
