@@ -55,7 +55,7 @@ Pergunta: o tutor deve guardar na memória como cada pessoa aprende, ou a própr
 ### Como fazem os outros
 
 - **As três skills de tutoria guardam um arquivo e não mexem na skill.** A `skill-tutor` pergunta o estilo na entrada ("teoria primeiro, mão na massa ou aprender pelo erro?") e guarda observações em `learner_profile.md`. A `teach` guarda o que a pessoa domina, o que está frágil, os equívocos e a calibração da autoavaliação em `learner.md`, e diz por que o estado fica fora da pasta da skill: para não se perder numa atualização e para servir em qualquer agente. A `tutor` só tem `journal.md`.
-- **O Hermes separa memória de procedimento e memória de fatos.** Skills são a memória de procedimento, e o agente pode criar e corrigir skills sozinho. O que é da pessoa vai em `USER.md` e `MEMORY.md`, que entram no prompt no começo de cada sessão. Na milena-vps o `USER.md` tem teto de 1.375 caracteres e o `MEMORY.md`, de 2.200 (`~/.hermes/config.yaml`).
+- **O Hermes separa memória de procedimento e memória de fatos.** Skills são a memória de procedimento, e o agente pode criar e corrigir skills sozinho. O que é da pessoa vai em `USER.md` e `MEMORY.md`, que entram no prompt no começo de cada sessão. Numa instalação conferida em 04/11/2026, o `USER.md` tinha teto de 1.375 caracteres e o `MEMORY.md`, de 2.200 (`memory.user_char_limit` e `memory.memory_char_limit` em `~/.hermes/config.yaml`).
 - **O OpenClaw usa um registro e uma promoção.** A skill `self-improving-agent` anota correções e erros em `.learnings/` e promove o que vale sempre para os arquivos do workspace (`SOUL.md`, `AGENTS.md`, `TOOLS.md`). Também não reescreve a skill que estava em uso.
 
 ### Decisão
@@ -63,7 +63,7 @@ Pergunta: o tutor deve guardar na memória como cada pessoa aprende, ou a própr
 A skill fica igual para todo mundo, e o padrão de cada pessoa vai para o perfil dela em `~/.tutor/perfil.md`. A adaptação acontece em tempo de uso: o tutor lê o perfil e ajusta porta de entrada, tamanho do passo e quantidade de ajuda. Reescrever a skill por usuário foi descartado por quatro motivos:
 
 1. A skill está instalada por link num repositório. No Hermes, uma correção automática da skill cairia no checkout do Git e misturaria o jeito de uma pessoa com o método de todos.
-2. O mesmo agente atende mais de uma pessoa (a Milena fala com quatro). Uma skill por pessoa não escala.
+2. O mesmo agente costuma atender mais de uma pessoa, por exemplo num grupo de WhatsApp. Uma skill por pessoa não escala.
 3. A memória da plataforma é pequena demais para o modelo do aprendiz. Ela guarda só uma linha apontando para o perfil.
 4. O que a pessoa sente que funciona costuma estar errado (Kornell e Bjork, 2008; Bjork, Dunlosky e Kornell, 2013; Deslauriers et al., 2019). Uma skill que se reescreve pelo feedback dela tenderia a trocar recuperação e espaçamento por reler. Por isso o padrão sai do desempenho, principalmente o atrasado, e a opinião entra como dado separado.
 
